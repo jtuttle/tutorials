@@ -45,7 +45,7 @@ public class FPSDisplay : MonoBehaviour {
 
         for(int i = 0; i < coloring.Length; i++) {
             if(fps >= coloring[i].minimumFPS) {
-                // TODO: this isn't working
+                // This isn't working for some reason. It makes the text blank.
                 //label.color = coloring[i].color;
                 break;
             }
