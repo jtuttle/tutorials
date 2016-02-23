@@ -21,4 +21,8 @@ public class Stuff : PooledObject {
         if(enteredCollider.CompareTag("Kill Zone"))
             ReturnToPool();
     }
+
+    void OnLevelWasLoaded() {
+        ReturnToPool();
+    }
 }
