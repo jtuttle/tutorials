@@ -33,7 +33,7 @@ public class Grid : MonoBehaviour {
 
         for(int ti = 0, vi = 0, y = 0; y < ySize; y++, vi++) {
             for(int x = 0; x < xSize; x++, ti += 6, vi++) {
-                triangles[ti] = 0;
+                triangles[ti] = vi;
                 triangles[ti + 3] = triangles[ti + 2] = vi + 1;
                 triangles[ti + 4] = triangles[ti + 1] = vi + xSize + 1;
                 triangles[ti + 5] = vi + xSize + 2;
@@ -43,6 +43,8 @@ public class Grid : MonoBehaviour {
                 yield return wait;
             }
         }
+
+        _mesh.RecalculateNormals();
     }
 
     private void OnDrawGizmos() {
