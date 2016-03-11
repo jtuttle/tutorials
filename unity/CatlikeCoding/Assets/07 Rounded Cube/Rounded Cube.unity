@@ -117,7 +117,6 @@ MonoBehaviour:
   xSize: 3
   ySize: 2
   zSize: 4
-  delayedRender: 1
 --- !u!23 &1602692052
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -128,7 +127,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 1331a080400f841409c519f0ce5e513b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
