@@ -76,8 +76,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cfa8e4c104ba4794b58f077b1ba8ef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: 5
-  radius: 3
+  gridSize: 10
+  radius: 8
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -87,7 +87,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: radius
-      value: 3
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: gridSize
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
