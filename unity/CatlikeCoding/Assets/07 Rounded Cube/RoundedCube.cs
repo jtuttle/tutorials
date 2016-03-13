@@ -248,7 +248,7 @@ public class RoundedCube : MonoBehaviour {
             Gizmos.color = Color.black;
             Gizmos.DrawSphere(transform.TransformPoint(_vertices[i]), 0.1f);
             Gizmos.color = Color.yellow;
-            Gizmos.DrawRay(_vertices[i], _normals[i]);
+            Gizmos.DrawRay(transform.TransformPoint(_vertices[i]), _normals[i]);
         }
     }
 }
