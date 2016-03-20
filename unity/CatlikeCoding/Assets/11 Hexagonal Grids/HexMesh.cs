@@ -7,11 +7,31 @@ public class HexMesh : MonoBehaviour {
     private List<Vector3> _vertices;
     private List<int> _tris;
 
+    private MeshCollider _meshCollider;
+
     private void Awake() {
         GetComponent<MeshFilter>().mesh = _hexMesh = new Mesh();
         _hexMesh.name = "Hex Mesh";
+
         _vertices = new List<Vector3>();
         _tris = new List<int>();
+
+        // Unity may have changed something about mesh colliders, as this part
+        // of the tutorial no longer appears to work. Since I'm not terribly
+        // interested in hex grids right now, I'm going to move on and come 
+        // back to this later if time allows.
+
+        /*
+        _meshCollider = gameObject.AddComponent<MeshCollider>();
+        _meshCollider.convex = true;
+        _meshCollider.isTrigger = true;
+        _meshCollider.sharedMesh = _hexMesh;
+        */
+
+        /*
+        _meshCollider = gameObject.GetComponent<MeshCollider>();
+        _meshCollider.sharedMesh = _hexMesh;
+        */
     }
 
     public void TriangulateCells(HexCell[] cells) {
