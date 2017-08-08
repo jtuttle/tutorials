@@ -9,7 +9,7 @@ https://blacksaildivision.com/ansible-tutorial-part-1
 
 # Execution
 
-    ```
-    vagrant up
-    ansible-playbook -i hosts playbook.yml
-    ```
+```
+vagrant up
+ansible-playbook -i hosts playbook.yml
+```
