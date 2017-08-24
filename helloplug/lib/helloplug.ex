@@ -96,7 +96,3 @@ defmodule User do
     field :last_name, :string
   end
 end
-
-# TODO: got stuck here, because the command to create a migration is failing with the error:
-# ** (ArgumentError) configuration for Helloplug.Repo not specified in :helloplug environment
-# even though (I think) this is what I'm doing in config/config.exs

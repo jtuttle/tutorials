@@ -1,21 +1,22 @@
-# Helloplug
+# Source
 
-**TODO: Add description**
+https://codewords.recurse.com/issues/five/building-a-web-framework-from-scratch-in-elixir
 
-## Installation
+# Requirements
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `helloplug` to your list of dependencies in `mix.exs`:
+- `elixir`
 
-```elixir
-def deps do
-  [
-    {:helloplug, "~> 0.1.0"}
-  ]
-end
+# Execution
+
 ```
+iex -S mix
+{:ok, _} = Plug.Adapters.Cowboy.http UserRouter, []
+```
+Then visit `localhost:4000/users/123` in browser.
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/helloplug](https://hexdocs.pm/helloplug).
-
+# Note
+I got stuck because the command to create a migration is fails with the error:
+```
+** (ArgumentError) configuration for Helloplug.Repo not specified in :helloplug environment
+```
+even though (I think) this is what I'm doing in config/config.exs...
