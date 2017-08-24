@@ -45,13 +45,20 @@ defmodule UserRouter do
   use Router
 
   # These two lines pre-compile the template so that we don't have to eval_file on every request.
-  require EEx
-  EEx.function_from_file :defp, :template_show_user, "templates/show_user.eex", [:user_id]
+  #require EEx
+  #EEx.function_from_file :defp, :template_show_user, "templates/show_user.eex", [:user_id]
   def route("GET", ["users", user_id], conn) do
-    #page_contents = EEx.eval_file("templates/show_user.eex", [user_id: user_id])
-    page_contents = template_show_user(user_id)
-    
-    conn |> Plug.Conn.put_resp_content_type("text/html") |> Plug.Conn.send_resp(200, page_contents)
+    case Helloplug.Repo.get(User, user_id) do
+      nil ->
+        conn |> Plug.Conn.send_response(404, "User with that ID not found, sorry!")
+      user ->
+        #page_contents = EEx.eval_file("templates/show_user.eex", [user_id: user_id])
+        # Updated view to use template
+        #page_contents = template_show_user(user_id)
+        # Updated view to use user object
+        page_contents = EEx.eval_file("templates/show_user.eex", [user: user])
+        conn |> Plug.Conn.put_resp_content_type("text/html") |> Plug.Conn.send_resp(200, page_contents)
+    end
   end
 
   def route("POST", ["users"], conn) do
@@ -94,5 +101,24 @@ defmodule User do
   schema "users" do
     field :first_name, :string
     field :last_name, :string
+
+    timestamps()
   end
 end
+
+# A test!
+# It breaks the program though so I'm guessing it's not supposed to go here. :)
+#defmodule HelloTest do
+#  use ExUnit.Case, async: true
+#  use Plug.Test
+
+#  @website_router_opts WebsiteRouter.init([])
+#  test "returns a user" do
+#    conn = conn(:get, "/users/1")
+#    conn = WebsiteRouter.call(conn, @website_router_opts)
+
+#    assert conn.state == :sent
+#    assert conn.status == 200
+#    assert String.match?(conn.resp_body, ~r/Fluffums/)
+#  end
+#end

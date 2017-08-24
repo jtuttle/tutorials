@@ -30,6 +30,6 @@ use Mix.Config
 #     import_config "#{Mix.env}.exs"
 
 # Configure our project to use a Sqlite database.
-config :helloplug, HelloPlug.Repo,
+config :helloplug, Helloplug.Repo,
   adapter: Sqlite.Ecto,
   database: "hello_plug.sqlite3"
