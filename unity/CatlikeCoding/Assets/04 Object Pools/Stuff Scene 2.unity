@@ -680,7 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa4c8b61767ec4d4c93d7746151c9416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfSpawners: 30
+  numberOfSpawners: 10
   radius: 25
   tiltAngle: -20
   spawnerPrefab: {fileID: 11481690, guid: cb595b54efbe14ad4b7330f86bf4a511, type: 2}

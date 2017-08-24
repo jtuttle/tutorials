@@ -128,6 +128,18 @@ Prefab:
       propertyPath: m_Name
       value: RoundedCube (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 11402802, guid: 4b3aca03a6f574e25a602131d1b628e6, type: 2}
+      propertyPath: xSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11402802, guid: 4b3aca03a6f574e25a602131d1b628e6, type: 2}
+      propertyPath: ySize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11402802, guid: 4b3aca03a6f574e25a602131d1b628e6, type: 2}
+      propertyPath: zSize
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b3aca03a6f574e25a602131d1b628e6, type: 2}
   m_IsPrefabParent: 0
@@ -173,6 +185,18 @@ Prefab:
     - target: {fileID: 177558, guid: 4b3aca03a6f574e25a602131d1b628e6, type: 2}
       propertyPath: m_Name
       value: RoundedCube (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11402802, guid: 4b3aca03a6f574e25a602131d1b628e6, type: 2}
+      propertyPath: xSize
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11402802, guid: 4b3aca03a6f574e25a602131d1b628e6, type: 2}
+      propertyPath: ySize
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11402802, guid: 4b3aca03a6f574e25a602131d1b628e6, type: 2}
+      propertyPath: zSize
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b3aca03a6f574e25a602131d1b628e6, type: 2}
@@ -297,6 +321,7 @@ Transform:
   m_LocalRotation: {x: 0.40821794, y: -0.23456973, z: 0.109381676, w: 0.87542605}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -383,6 +408,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
